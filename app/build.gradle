@@ -1,4 +1,4 @@
-apply plugin: 'com.android.application'
+﻿apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 26
@@ -47,17 +47,17 @@ android {
     }
     signingConfigs {
         debug {
-            storeFile file('/../afamily.jks')//签名文件路径
-            storePassword "yjlx2017"
-            keyAlias "afamily"
-            keyPassword 'yjlx2017'  //签名密码
+            storeFile file('')//签名文件路径
+            storePassword ""
+            keyAlias ""
+            keyPassword ''  //签名密码
             println("====== signingConfigs.debug ======")
         }
         release {
-            storeFile file('/../afamily.jks')//签名文件路径
-            storePassword "yjlx2017"
-            keyAlias "afamily"
-            keyPassword "yjlx2017"  //签名密码
+            storeFile file('')//签名文件路径
+            storePassword ""
+            keyAlias ""
+            keyPassword ""  //签名密码
             println("====== signingConfigs.release ======")
         }
     }
