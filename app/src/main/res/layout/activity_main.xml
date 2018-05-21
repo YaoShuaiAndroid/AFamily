@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.family.afamily.activity.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/main_bottom_rl" />
+    <RelativeLayout
+        android:id="@+id/main_bottom_rl"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#f9f9f9"
+        android:layout_alignParentBottom="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <com.family.afamily.view.TabButtonView
+                android:id="@+id/main_tab_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:tabImgHeight="22dp"
+                app:tabImgSelectImg="@mipmap/menu_1_1"
+                app:tabImgUnSelectImg="@mipmap/menu_1_0"
+                app:tabImgWidth="22dp"
+                app:tabText="水与沙"
+                app:tabTextSelectColor="#fa9826"
+                app:tabTextSize="13.5sp"
+                app:tabTextUnSelectColor="#343434" />
+            <com.family.afamily.view.TabButtonView
+                android:id="@+id/main_tab_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:tabImgHeight="22dp"
+                app:tabImgSelectImg="@mipmap/menu_2_1"
+                app:tabImgUnSelectImg="@mipmap/menu_2_0"
+                app:tabImgWidth="22dp"
+                app:tabText="早教"
+                app:tabTextSelectColor="#fa9826"
+                app:tabTextSize="13.5sp"
+                app:tabTextUnSelectColor="#343434" />
+            <com.family.afamily.view.TabButtonView
+                android:id="@+id/main_tab_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:tabImgHeight="22dp"
+                app:tabImgSelectImg="@mipmap/menu_3_1"
+                app:tabImgUnSelectImg="@mipmap/menu_3_0"
+                app:tabImgWidth="22dp"
+                app:tabText="书房"
+                app:tabTextSelectColor="#fa9826"
+                app:tabTextSize="13.5sp"
+                app:tabTextUnSelectColor="#343434" />
+            <com.family.afamily.view.TabButtonView
+                android:id="@+id/main_tab_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:tabImgHeight="22dp"
+                app:tabImgSelectImg="@mipmap/menu_4_1"
+                app:tabImgUnSelectImg="@mipmap/menu_4_0"
+                app:tabImgWidth="22dp"
+                app:tabText="玩中学"
+                app:tabTextSelectColor="#fa9826"
+                app:tabTextSize="13.5sp"
+                app:tabTextUnSelectColor="#343434" />
+            <com.family.afamily.view.TabButtonView
+                android:id="@+id/main_tab_5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:tabImgHeight="22dp"
+                app:tabImgSelectImg="@mipmap/menu_5_1"
+                app:tabImgUnSelectImg="@mipmap/menu_5_0"
+                app:tabImgWidth="22dp"
+                app:tabText="我的"
+                app:tabTextSelectColor="#fa9826"
+                app:tabTextSize="13.5sp"
+                app:tabTextUnSelectColor="#343434" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:background="#e4e4e4"/>
+    </RelativeLayout>
+</RelativeLayout>

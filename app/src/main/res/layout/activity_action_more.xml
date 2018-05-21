@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="match_parent">
+    <include layout="@layout/base_back_title_layout"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/act_more_bg"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:maxHeight="200dp"
+            android:scaleType="centerCrop"/>
+        <LinearLayout
+            android:id="@+id/act_more_add_pic"
+            android:layout_width="160dp"
+            android:layout_height="110dp"
+            android:background="#F2F2F2"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_centerHorizontal="true">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="40dp"
+                android:src="@mipmap/ic_xj_i"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#999"
+                android:layout_marginTop="4dp"
+                android:text="添加封面图"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:background="@color/line_color"
+        android:layout_marginTop="10dp"/>
+    <EditText
+        android:id="@+id/act_more_decs_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minLines="7"
+        android:padding="10dp"
+        android:textSize="14sp"
+        android:background="#fff"
+        android:textColor="#333"
+        android:hint="活动说明"
+        android:gravity="top"
+        android:textColorHint="#ccc"/>
+</LinearLayout>

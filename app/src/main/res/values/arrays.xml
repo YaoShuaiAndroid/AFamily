@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="zaoj_type">
+        <item >语言</item>
+        <item >科学</item>
+        <item >数学</item>
+        <item >日常</item>
+        <item >美术</item>
+        <item >手工</item>
+    </string-array>
+    <string-array name="act_number">
+        <item >1</item>
+        <item >2</item>
+        <item >3</item>
+        <item >4</item>
+        <item >5</item>
+        <item >6</item>
+        <item >7</item>
+        <item >8</item>
+        <item >9</item>
+        <item >10</item>
+    </string-array>
+</resources>

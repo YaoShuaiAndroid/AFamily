@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#f8f8f8"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/color_yellow">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:onClick="back"
+            android:gravity="center"
+            android:paddingLeft="11dp"
+            android:paddingRight="11dp"
+            android:orientation="horizontal"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="18dp"
+                android:src="@mipmap/ic_back"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/base_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="意见反馈"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal"
+            android:layout_marginRight="10dp"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/base_title_right_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/title_number_tv"
+                android:gravity="center"
+                android:paddingRight="3dp"
+                android:text="回复意见"
+                android:textColor="#fff"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/title_number_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ic_feedback_yuan_bg"
+                android:gravity="center"
+                android:maxLength="2"
+                android:visibility="gone"
+                android:textColor="@color/color_yellow"
+                android:textSize="11sp" />
+        </LinearLayout>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:layout_marginTop="15dp"
+        android:background="#dddd" />
+
+    <EditText
+        android:id="@+id/feedback_content_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:gravity="top"
+        android:hint="请输入您要反馈的建议"
+        android:maxLength="500"
+        android:minLines="8"
+        android:padding="10dp"
+        android:textColor="#333333"
+        android:textColorHint="#999"
+        android:textSize="14sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:background="#dddd" />
+
+    <TextView
+        android:id="@+id/feedback_submit_tv"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/btn_login_25_yellow"
+        android:gravity="center"
+        android:text="提交"
+        android:textColor="#fff"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:layout_marginTop="40dp"
+        android:background="#dddd" />
+
+    <LinearLayout
+        android:id="@+id/feedback_call_ll"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#fff"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/fk_dh"/>
+        <TextView
+            android:id="@+id/feedback_call_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_yellow"
+            android:layout_marginLeft="7dp"
+            android:textSize="16sp"
+            />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:background="#dddd" />
+</LinearLayout>

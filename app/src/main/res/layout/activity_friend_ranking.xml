@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#f8f8f8"
+    android:layout_height="match_parent">
+    <include layout="@layout/base_back_title_layout"/>
+    <com.superrecycleview.superlibrary.recycleview.SuperRecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:id="@+id/friend_list_rv"/>
+</LinearLayout>

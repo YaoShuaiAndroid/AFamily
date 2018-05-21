@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:paddingLeft="8dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="15dp"
+    android:paddingRight="8dp"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/item_recommend_iv"
+        android:layout_width="160dp"
+        android:layout_height="90dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/item_bg_1"/>
+    <LinearLayout
+        android:layout_width="160dp"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/item_recommend_dz_iv"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@mipmap/ic_follow"/>
+        <TextView
+            android:id="@+id/item_recommend_dz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:text="5"
+            android:textColor="#999"
+            android:paddingLeft="3dp"/>
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="30dp"
+            android:src="@mipmap/ic_recomment"/>
+        <TextView
+            android:id="@+id/item_recommend_pl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:text="55"
+            android:textColor="#999"
+            android:paddingLeft="3dp"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/item_recommend_title"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:textColor="#666"
+        android:maxLines="1"
+        android:layout_marginTop="5dp"
+        android:ellipsize="end"
+        android:text="暗示的房间暗示的房间爱妃爱妃爱妃"/>
+</LinearLayout>

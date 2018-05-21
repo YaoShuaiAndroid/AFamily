@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/base_fragment_title"
+        android:layout_width="match_parent"
+        android:background="@color/color_yellow"
+        android:layout_height="wrap_content">
+        <include layout="@layout/base_title_layout"/>
+    </LinearLayout>
+    <com.superrecycleview.superlibrary.recycleview.SuperRecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:id="@+id/frag4_wj_list_rv"/>
+    <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:overScrollMode="never"-->
+        <!--android:scrollbars="none">-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:orientation="vertical">-->
+            <!--<com.family.afamily.view.MyListView-->
+                <!--android:id="@+id/frag4_wj_list_lv"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:divider="@color/line_color"-->
+                <!--android:dividerHeight="0.8dp"/>-->
+        <!--</LinearLayout>-->
+    <!--</ScrollView>-->
+</LinearLayout>

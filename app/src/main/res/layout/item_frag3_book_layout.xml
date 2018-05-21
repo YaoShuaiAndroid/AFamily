@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:gravity="center_horizontal"
+    android:id="@+id/item_goods_root"
+    android:padding="10dp"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/item_book_img"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="15dp"
+        android:src="@mipmap/c_sf_7"/>
+    <TextView
+        android:id="@+id/item_book_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#333"
+        android:textSize="14sp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:layout_marginTop="15dp"
+        android:text="可爱的米老鼠"/>
+    <TextView
+        android:id="@+id/item_book_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ff00"
+        android:visibility="gone"
+        android:textSize="14sp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="4dp"
+        android:text="¥850.00"/>
+</LinearLayout>

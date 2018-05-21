@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#ffff"
+    android:layout_height="match_parent">
+    <include layout="@layout/base_back_title_layout"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="42.5dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/order_all_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="全部"
+                android:textColor="@color/color_yellow"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/order_all_v"
+                android:layout_width="match_parent"
+                android:layout_height="2.5dp"
+                android:background="@color/color_yellow" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/order_dfk_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="待付款"
+                android:textColor="#222"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/order_dfk_v"
+                android:layout_width="match_parent"
+                android:layout_height="2.5dp"
+                android:background="@color/color_yellow"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/order_dfh_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="待发货"
+                android:textColor="#222"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/order_dfh_v"
+                android:layout_width="match_parent"
+                android:layout_height="2.5dp"
+                android:background="@color/color_yellow"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/order_ok_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="已完成"
+                android:textColor="#222"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/order_ok_v"
+                android:layout_width="match_parent"
+                android:layout_height="2.5dp"
+                android:background="@color/color_yellow"
+                android:visibility="invisible" />
+        </LinearLayout>
+    </LinearLayout>
+
+   <!--<include layout="@layout/line_10dp_layout"/>-->
+    <com.superrecycleview.superlibrary.recycleview.SuperRecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:id="@+id/order_list_lv"/>
+</LinearLayout>

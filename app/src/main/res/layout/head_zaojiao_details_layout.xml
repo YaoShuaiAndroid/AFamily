@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.family.afamily.view.LandLayoutVideo
+        android:id="@+id/zaoj_video_player"
+        android:layout_width="match_parent"
+        android:layout_height="195dp" />
+    <TextView
+        android:id="@+id/zaoj_d_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="当boss宝宝换上真人头像后"
+        android:textSize="15sp"
+        android:textColor="#333"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="10dp"
+        >
+        <ImageView
+            android:id="@+id/zaoj_d_head_iv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="7dp"
+            android:src="@mipmap/ic_user_head"/>
+        <TextView
+            android:id="@+id/zaoj_nick_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#333"
+            android:textSize="15sp"
+            android:layout_toRightOf="@+id/zaoj_d_head_iv"
+            android:text="Baby dkjaljl"/>
+        <TextView
+            android:id="@+id/zaoj_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/zaoj_nick_tv"
+            android:textColor="#999"
+            android:textSize="12sp"
+            android:layout_toRightOf="@+id/zaoj_d_head_iv"
+            android:layout_marginTop="4dp"
+            android:text="2017-9-31 23:00 播放1千"/>
+        <LinearLayout
+            android:id="@+id/zaoj_zan_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/zaoj_zan_iv"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/ic_zan_i"/>
+            <TextView
+                android:id="@+id/zaoj_zan_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textSize="12sp"
+                android:textColor="@color/color_yellow"
+                android:text="425"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <include layout="@layout/line_10dp_layout"/>
+
+    <TextView
+        android:id="@+id/zaoj_comment_count_tv"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="评论（520）"
+        android:textColor="#333"
+        android:textSize="18sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:background="@color/line_color"/>
+</LinearLayout>

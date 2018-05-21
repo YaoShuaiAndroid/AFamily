@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="100dp">
+    <ImageView
+        android:id="@+id/item_zaoj_img"
+        android:layout_width="115dp"
+        android:layout_height="100dp"
+        android:src="@mipmap/item_bg_4"
+        android:scaleType="centerCrop"/>
+    <TextView
+        android:id="@+id/item_zaoj_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/item_zaoj_img"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp"
+        android:text="宝宝瘦不等于营养不良fasdfasdf别乱补"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textSize="15sp"
+        android:textColor="#333"
+        android:layout_marginTop="15dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/item_zaoj_img"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="7dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="10dp">
+        <ImageView
+            android:id="@+id/item_follow_zan_iv"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@mipmap/ic_follow"/>
+        <TextView
+            android:id="@+id/item_follow_zan_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:text="5"
+            android:textColor="#999"
+            android:paddingLeft="3dp"/>
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="30dp"
+            android:src="@mipmap/ic_recomment"/>
+        <TextView
+            android:id="@+id/item_follow_pl_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:text="55"
+            android:textColor="#999"
+            android:paddingLeft="3dp"/>
+    </LinearLayout>
+
+</RelativeLayout>

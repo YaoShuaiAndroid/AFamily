@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/base_back_title_layout"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:background="@mipmap/cash_bg">
+        <TextView
+            android:id="@+id/cash_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:textSize="24sp"
+            android:textColor="#333"
+            android:text="¥5000"/>
+        <TextView
+            android:id="@+id/cash_withdrawals_btn"
+            android:layout_width="125dp"
+            android:layout_height="29dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:textColor="#fff"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:text="立即提现"
+            android:background="@drawable/fillet_4_yellow_bg"
+            android:layout_below="@+id/cash_money"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:padding="10dp">
+        <ImageView
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:src="@mipmap/ic_cash_i"
+            android:id="@+id/cash_iv_1"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#333"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="7dp"
+            android:layout_toRightOf="@+id/cash_iv_1"
+            android:text="交易明细"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#F7F7F7"
+            android:gravity="center"
+            android:text="金额"
+            android:textColor="#777"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#F7F7F7"
+            android:gravity="center"
+            android:text="日期"
+            android:textColor="#777"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#F7F7F7"
+            android:gravity="center"
+            android:text="来源"
+            android:textColor="#777"
+            android:textSize="14sp" />
+    </LinearLayout>
+    <com.superrecycleview.superlibrary.recycleview.SuperRecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:id="@+id/cash_list_rv"/>
+</LinearLayout>

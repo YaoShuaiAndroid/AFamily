@@ -1,0 +1,208 @@
+package com.family.afamily.activity;
+
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.text.TextUtils;
+import android.view.View;
+import android.widget.CheckBox;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+
+import com.alipay.sdk.app.PayTask;
+import com.family.afamily.R;
+import com.family.afamily.activity.base.BaseActivity;
+import com.family.afamily.activity.mvp.interfaces.PayOrderView;
+import com.family.afamily.activity.mvp.presents.PayOrderPresenter;
+import com.family.afamily.entity.PayResult;
+import com.family.afamily.utils.SPUtils;
+import com.family.afamily.wxapi.WXPayResultCallback;
+import com.tencent.mm.opensdk.modelpay.PayReq;
+import com.tencent.mm.opensdk.openapi.IWXAPI;
+import com.tencent.mm.opensdk.openapi.WXAPIFactory;
+
+import java.util.Map;
+
+import butterknife.BindView;
+import butterknife.OnClick;
+
+/**
+ * Created by hp2015-7 on 2018/1/16.
+ */
+
+public class PayOrderActivity extends BaseActivity<PayOrderPresenter> implements PayOrderView {
+    @BindView(R.id.pay_wx_check)
+    CheckBox payWxCheck;
+    @BindView(R.id.pay_wx_item)
+    RelativeLayout payWxItem;
+    @BindView(R.id.pay_alipay_check)
+    CheckBox payAlipayCheck;
+    @BindView(R.id.pay_alipay_item)
+    RelativeLayout payAlipayItem;
+    @BindView(R.id.pay_money_tv)
+    TextView payMoneyTv;
+    @BindView(R.id.btn_submit)
+    TextView btnSubmit;
+    private String order_sn, order_money;
+    private String token;
+
+    private IWXAPI api;//微信
+
+    @Override
+    protected void onCreateActivity(Bundle savedInstanceState) {
+        setContentView(R.layout.activity_pay_order);
+        order_sn = getIntent().getStringExtra("order_sn");
+        order_money = getIntent().getStringExtra("order_money");
+        token = (String) SPUtils.get(mActivity, "token", "");
+        setResult(100);
+    }
+
+    @OnClick(R.id.pay_wx_item)
+    public void clickWXPay() {
+        payWxCheck.setChecked(true);
+        payAlipayCheck.setChecked(false);
+    }
+
+    @OnClick(R.id.pay_alipay_item)
+    public void clickAliPay() {
+        payWxCheck.setChecked(false);
+        payAlipayCheck.setChecked(true);
+    }
+
+    @Override
+    public void netWorkConnected() {
+
+    }
+
+    @Override
+    public PayOrderPresenter initPresenter() {
+        return new PayOrderPresenter(this);
+    }
+
+    @Override
+    public void initDataAsync() {
+        super.initDataAsync();
+        setTitle(this, "支付中心");
+        if (TextUtils.isEmpty(order_sn) || TextUtils.isEmpty(order_money)) {
+            toast("订单时间错误");
+            finish();
+        }
+
+        payMoneyTv.setText("¥" + order_money);
+
+        btnSubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                boolean isCheck = payWxCheck.isChecked();
+                String type = isCheck ? "wxpay" : "alipay";
+                presenter.submitData(token, order_sn, type);
+            }
+        });
+
+
+        myApplication.setWxPayResultCallback(new WXPayResultCallback() {
+            @Override
+            public void payResultCallback(int resultCode) {
+                String mes;
+                if (resultCode == -1) {
+                    mes = "支付失败,错误码是" + resultCode;
+                } else if (resultCode == -2) {
+                    mes = "取消支付";
+                } else if (resultCode == 0) {
+                    mes = "支付成功";
+                    toast(mes);
+                    setResult(100);
+                    finish();
+                    return;
+                } else {
+                    mes = "支付失败,错误码是" + resultCode;
+                }
+                toast(mes);
+            }
+        });
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        myApplication.setWxPayResultCallback(null);
+    }
+
+    @Override
+    public void successData(final Map<String, String> data) {
+        if (data != null) {
+            String payType = data.get("paytype");
+            if (TextUtils.isEmpty(payType)) {
+                toast("服务器异常，未获取到支付类型");
+            } else {
+                if (data.get("paytype").equalsIgnoreCase("wxpay")) {
+                    //微信支付
+                    api = WXAPIFactory.createWXAPI(mActivity, data.get("appid"));
+                    api.registerApp(data.get("appid"));
+                    try {
+                        PayReq req = new PayReq();
+                        req.appId = data.get("appid");
+                        req.partnerId = data.get("partnerid");
+                        req.prepayId = data.get("prepayid");
+                        req.nonceStr = data.get("noncestr");
+                        req.timeStamp = data.get("timestamp");
+                        req.packageValue = data.get("packages");
+                        req.sign = data.get("sign");
+                        toast("正在调起微信支付，请稍后...");
+                        // 在支付之前，如果应用没有注册到微信，应该先调用IWXMsg.registerApp将应用注册到微信
+                        api.sendReq(req);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                } else if (data.get("paytype").equalsIgnoreCase("alipay")) {
+                    //支付宝支付逻辑
+                    if (TextUtils.isEmpty(data.get("orderInfo"))) {
+                        toast("未获取到订单数据");
+                        return;
+                    }
+                    Runnable payRunnable = new Runnable() {
+                        @Override
+                        public void run() {
+                            PayTask alipay = new PayTask(mActivity);
+                            Map<String, String> result = alipay.payV2(data.get("orderInfo"), true);
+                            Message msg = new Message();
+                            msg.what = SDK_PAY_FLAG;
+                            msg.obj = result;
+                            mHandler.sendMessage(msg);
+                        }
+                    };
+                    Thread payThread = new Thread(payRunnable);
+                    payThread.start();
+                }
+            }
+        }
+    }
+
+
+    //支付宝sdk返回结果集标识
+    private static final int SDK_PAY_FLAG = 1;
+    //支付宝支付结果
+    private Handler mHandler = new Handler() {
+        public void handleMessage(Message msg) {
+            if (msg.what == SDK_PAY_FLAG) {
+                PayResult payResult = new PayResult((Map<String, String>) msg.obj);
+                /**
+                 对于支付结果，请商户依赖服务端的异步通知结果。同步通知结果，仅作为支付结束的通知。
+                 */
+                String resultInfo = payResult.getResult();// 同步返回需要验证的信息
+                String resultStatus = payResult.getResultStatus();
+                // 判断resultStatus 为9000则代表支付成功
+                if (TextUtils.equals(resultStatus, "9000")) {
+                    // 该笔订单是否真实支付成功，需要依赖服务端的异步通知。
+                    toast("支付成功");
+                    setResult(100);
+                    finish();
+                } else {
+                    // 该笔订单真实的支付结果，需要依赖服务端的异步通知。
+                    toast("支付失败");
+                }
+            }
+        }
+    };
+
+}

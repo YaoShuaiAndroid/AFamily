@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:orientation="vertical"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/item_day_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="16"
+            android:textColor="#333"
+            android:textSize="16sp"/>
+        <TextView
+            android:id="@+id/item_week_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="周五"
+            android:layout_marginTop="5dp"
+            android:textColor="#999"
+            android:textSize="13sp"/>
+    </LinearLayout>
+    <View
+        android:layout_width="70dp"
+        android:layout_height="0.8dp"
+        android:background="@color/line_color"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/item_child_list_rv"
+        android:layout_width="70dp"
+        android:layout_height="match_parent"
+        android:overScrollMode="always"
+        android:scrollbars="none"/>
+</LinearLayout>

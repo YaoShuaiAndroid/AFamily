@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/base_back_title_layout"/>
+    <WebView
+        android:id="@+id/to_exte_web"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_above="@+id/to_exte_btn"
+        android:scrollbars="none"
+        android:overScrollMode="never"/>
+
+    <TextView
+        android:id="@+id/to_exte_btn"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/color_yellow"
+        android:textColor="#fff"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:layout_alignParentBottom="true"
+        android:text="推广"/>
+</RelativeLayout>

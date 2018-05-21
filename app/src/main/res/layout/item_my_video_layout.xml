@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#fff"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/item_content_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:lineSpacingMultiplier="1.2"
+        android:maxLines="2"
+        android:text="当boss宝宝换上真人头像后我就笑了当boss宝宝换上真人头像后我就笑了当boss宝宝换上真人头像后我就笑了"
+        android:textColor="#333"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/item_img_tv"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="10dp"
+        android:src="@mipmap/item_bg_1" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp">
+
+        <TextView
+            android:id="@+id/item_follow_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="2017-12-6 12:15"
+            android:textColor="#999"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical|right">
+
+            <ImageView
+                android:id="@+id/item_follow_zan_iv"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@mipmap/ic_follow"/>
+            <TextView
+                android:id="@+id/item_follow_zan_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="5"
+                android:textColor="#999"
+                android:paddingLeft="3dp"/>
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginLeft="30dp"
+                android:src="@mipmap/ic_recomment"/>
+            <TextView
+                android:id="@+id/item_follow_pl_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="55"
+                android:textColor="#999"
+                android:paddingLeft="3dp"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/line_color"/>
+    <TextView
+        android:id="@+id/item_del_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="删除"
+        android:textColor="#999"
+        android:paddingTop="5dp"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="5dp"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:background="@drawable/fillet_25_huis_line_bg"/>
+</LinearLayout>

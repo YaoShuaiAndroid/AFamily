@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/base_fragment_title"
+        android:layout_width="match_parent"
+        android:background="@color/color_yellow"
+        android:layout_height="wrap_content">
+        <include layout="@layout/base_title_layout"/>
+    </LinearLayout>
+
+    <com.superrecycleview.superlibrary.recycleview.SuperRecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:id="@+id/frag3_list_rv"/>
+
+    <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:overScrollMode="never"-->
+        <!--android:scrollbars="none">-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:orientation="vertical">-->
+
+            <!--&lt;!&ndash;<com.youth.banner.Banner&ndash;&gt;-->
+                <!--&lt;!&ndash;android:id="@+id/frag3_banner"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="175dp" />&ndash;&gt;-->
+
+            <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="95dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginLeft="10dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginRight="10dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:gravity="center"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:orientation="horizontal">&ndash;&gt;-->
+
+                <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_weight="1"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:gravity="center">&ndash;&gt;-->
+
+                    <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:id="@+id/frag3_1_tab"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_width="70dp"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_height="70dp"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:src="@mipmap/ic_sf_1" />&ndash;&gt;-->
+                <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+
+                <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_weight="1"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:gravity="center">&ndash;&gt;-->
+
+                    <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:id="@+id/frag3_2_tab"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_width="70dp"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_height="70dp"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:src="@mipmap/c_sf_2" />&ndash;&gt;-->
+                <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+
+                <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_weight="1"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:gravity="center">&ndash;&gt;-->
+
+                    <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:id="@+id/frag3_3_tab"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_width="70dp"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_height="70dp"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:src="@mipmap/c_sf_3" />&ndash;&gt;-->
+                <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+            <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+
+            <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:orientation="vertical">&ndash;&gt;-->
+
+                <!--&lt;!&ndash;<View&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="10dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:background="#FFF5F7" />&ndash;&gt;-->
+
+                <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="63dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:background="@mipmap/c_sf_4" />&ndash;&gt;-->
+
+                <!--&lt;!&ndash;<android.support.v7.widget.RecyclerView&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:id="@+id/frag3_new_list_lv"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_marginTop="-18dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:overScrollMode="never"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:scrollbars="none" />&ndash;&gt;-->
+            <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+
+            <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:orientation="vertical">&ndash;&gt;-->
+
+                <!--&lt;!&ndash;<View&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="10dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:background="#FFF5F7" />&ndash;&gt;-->
+
+                <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="63dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:background="@mipmap/c_sf_5" />&ndash;&gt;-->
+
+                <!--&lt;!&ndash;<android.support.v7.widget.RecyclerView&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:id="@+id/frag3_hot_list_lv"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_marginTop="-18dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:overScrollMode="never"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:scrollbars="none" />&ndash;&gt;-->
+            <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+            <!--&lt;!&ndash;<RelativeLayout&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="62dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:background="#f8f8f8">&ndash;&gt;-->
+                <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:id="@+id/frag3_open_member_iv"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:background="@mipmap/ic_sf_open"/>&ndash;&gt;-->
+                <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:orientation="horizontal"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:gravity="center"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_centerVertical="true"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_centerHorizontal="true">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:id="@+id/frag3_open_vip_tv"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:textSize="18sp"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:textColor="#fff"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:text="开通会员"/>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:id="@+id/frag3_open_vip_iv"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_width="18dp"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_height="18dp"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_marginLeft="5dp"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:src="@mipmap/ic_sf_open_a"/>&ndash;&gt;-->
+                <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+            <!--&lt;!&ndash;</RelativeLayout>&ndash;&gt;-->
+            <!--&lt;!&ndash;<com.family.afamily.view.MyListView&ndash;&gt;-->
+                <!--&lt;!&ndash;android:id="@+id/frag3_list_lv"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:overScrollMode="never"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:scrollbars="none"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:dividerHeight="0.8dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:divider="@color/line_color"/>&ndash;&gt;-->
+        <!--</LinearLayout>-->
+    <!--</ScrollView>-->
+</LinearLayout>

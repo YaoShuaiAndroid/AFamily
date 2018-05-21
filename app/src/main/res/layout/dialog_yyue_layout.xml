@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:id="@+id/dialog_yyue_main_rl"
+    android:paddingBottom="10dp"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_marginTopPercent="30%"
+        android:clickable="true"
+        android:orientation="vertical"
+        android:gravity="bottom"
+        >
+        <TextView
+            android:id="@+id/dialog_title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:background="@color/color_yellow"
+            android:text="标题"
+            android:textSize="16sp"
+            android:textColor="#fff"/>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/dialog_list_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            android:layout_marginBottom="10dp"/>
+
+        <TextView
+            android:id="@+id/dialog_cancel_tv"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:background="#fff"
+            android:text="取消"
+            android:textSize="15sp"
+            android:textColor="#333"/>
+    </LinearLayout>
+
+
+</android.support.percent.PercentRelativeLayout>

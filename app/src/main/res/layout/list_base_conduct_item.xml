@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="100dp"
+    android:layout_height="70dp"
+    android:gravity="center"
+    android:textColor="#FFF"
+    android:id="@+id/conduct_item_class_text"
+    android:layout_marginLeft="10dp"
+    android:textSize="18sp"
+    />

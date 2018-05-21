@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#f8f8f8"
+    android:layout_height="match_parent">
+    <include layout="@layout/base_back_title_layout"/>
+    <TextView
+        android:id="@+id/address_province_tv"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:textColor="@color/color_yellow"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:textColorHint="#ddd"
+        android:hint="请选择省份"
+        android:background="#fff"/>
+    <TextView
+        android:id="@+id/address_city_tv"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:textColor="@color/color_yellow"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        android:layout_marginTop="1dp"
+        android:paddingLeft="15dp"
+        android:textColorHint="#ddd"
+        android:hint="请选择城市"
+        android:background="#fff"/>
+    <TextView
+        android:id="@+id/address_area_tv"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:textColor="@color/color_yellow"
+        android:gravity="center_vertical"
+        android:layout_marginTop="1dp"
+        android:visibility="gone"
+        android:paddingLeft="15dp"
+        android:textColorHint="#ddd"
+        android:hint="请选择区域"
+        android:background="#fff"/>
+    <include layout="@layout/line_10dp_layout"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/address_list_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none"/>
+</LinearLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#f8f8f8"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:background="#fff"
+        android:layout_height="50dp">
+        <TextView
+            android:id="@+id/finance_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:singleLine="true"
+            android:layout_toLeftOf="@+id/finance_count"
+            android:textColor="#666"
+            android:ellipsize="end"
+            android:text="南山顶固嘎嘎游泳池"/>
+        <TextView
+            android:id="@+id/finance_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:layout_centerVertical="true"
+            android:textColor="#666"
+            android:layout_alignParentRight="true"
+            android:text="会员数：2556"/>
+    </RelativeLayout>
+
+</LinearLayout>

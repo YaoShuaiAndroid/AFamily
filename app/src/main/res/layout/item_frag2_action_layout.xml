@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:padding="10dp"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/item_action_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="科学梳理记忆免费大型亲子公益活动"
+        android:textSize="15sp"
+        android:textColor="#222"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
+        <ImageView
+            android:id="@+id/item_action_img"
+            android:layout_width="100dp"
+            android:layout_height="75dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/item_bg_x" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginLeft="7dp"
+            android:layout_toRightOf="@+id/item_action_img"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/item_action_decs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:minLines="3"
+                android:textColor="#777"
+                android:lineSpacingMultiplier="1.1"
+                android:textSize="13.5sp"
+                android:text="阿斯蒂芬啊是分类接口鞍山附近的法规及阿萨德付款就啊是房间口暗示的" />
+
+            <TextView
+                android:id="@+id/item_action_time"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:text="2017-8-8"
+                android:textColor="#999"
+                android:textSize="13.5sp" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

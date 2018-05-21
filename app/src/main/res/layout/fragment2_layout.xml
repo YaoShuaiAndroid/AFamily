@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/base_fragment_title"
+        android:layout_width="match_parent"
+        android:background="@color/color_yellow"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/color_yellow">
+
+
+
+            <LinearLayout
+                android:id="@+id/frag2_title_search"
+                android:layout_width="230dp"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/title_search_bg"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/ic_search" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="搜索新鲜事..."
+                    android:textColor="#fff"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/frag2_title_video"
+                android:layout_width="45dp"
+                android:layout_height="match_parent"
+                android:drawablePadding="5dp"
+                android:layout_alignParentRight="true"
+                android:padding="11dp"
+                android:src="@mipmap/ic_zj_video" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/frag2_recommend_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="推荐"
+                android:textColor="@color/color_yellow"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/frag2_recommend_v"
+                android:layout_width="match_parent"
+                android:layout_height="2.5dp"
+                android:background="@color/color_yellow" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/frag2_follow_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="关注"
+                android:textColor="#222"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/frag2_follow_v"
+                android:layout_width="match_parent"
+                android:layout_height="2.5dp"
+                android:background="@color/color_yellow"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/frag2_master_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="达人"
+                android:textColor="#222"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/frag2_master_v"
+                android:layout_width="match_parent"
+                android:layout_height="2.5dp"
+                android:background="@color/color_yellow"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/frag2_action_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="活动"
+                android:textColor="#222"
+                android:textSize="14sp" />
+
+            <View
+                android:id="@+id/frag2_action_v"
+                android:layout_width="match_parent"
+                android:layout_height="2.5dp"
+                android:background="@color/color_yellow"
+                android:visibility="invisible" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:background="@color/line_color" />
+
+    <ScrollView
+        android:id="@+id/frag2_scroll_sv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:visibility="visible"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/frag2_follow_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/frag2_follow_list_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:overScrollMode="never"
+                    android:scrollbars="none"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="#f2f2f2"/>
+            </LinearLayout>
+            <com.family.afamily.view.MyListView
+                android:id="@+id/frag2_list_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never"
+                android:dividerHeight="0.8dp"
+                android:divider="@color/line_color"
+                android:scrollbars="none" />
+            <LinearLayout
+                android:id="@+id/frag2_master_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="20dp"
+                android:visibility="gone"
+                android:orientation="vertical">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="#f2f2f2"/>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/frag2_master_list_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:overScrollMode="never"
+                    android:scrollbars="none"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <RelativeLayout
+        android:id="@+id/frag2_action_rl"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/frag2_action_list_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:overScrollMode="never"
+            android:layout_above="@+id/frag2_action_btn"/>
+        <TextView
+            android:id="@+id/frag2_action_btn"
+            android:layout_width="match_parent"
+            style="@style/btn_login_style"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:text="我要发布活动"
+            android:layout_marginTop="10dp"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:id="@+id/frag2_not_data">
+        <include layout="@layout/not_data_layout"/>
+    </LinearLayout>
+</LinearLayout>

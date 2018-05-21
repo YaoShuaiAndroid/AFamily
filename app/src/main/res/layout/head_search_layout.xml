@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp">
+        <View
+            android:layout_width="3dp"
+            android:layout_height="15dp"
+            android:background="@color/color_yellow"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_yellow"
+            android:text="热门搜索"
+            android:textSize="14sp"
+            android:layout_marginLeft="5dp"/>
+    </LinearLayout>
+    <com.family.afamily.view.TagLayout
+        android:id="@+id/head_hot_tag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/line_color"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp">
+        <View
+            android:layout_width="3dp"
+            android:layout_height="15dp"
+            android:background="@color/color_yellow"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_yellow"
+            android:text="最近搜索"
+            android:textSize="14sp"
+            android:layout_marginLeft="5dp"/>
+    </LinearLayout>
+    <com.family.afamily.view.TagLayout
+        android:id="@+id/head_cy_tag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"/>
+</LinearLayout>

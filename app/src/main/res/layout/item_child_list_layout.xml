@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:id="@+id/item_child_root"
+    android:gravity="center"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/item_child_img"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginRight="7dp"
+        android:src="@mipmap/ic_add_baby"/>
+    <TextView
+        android:id="@+id/item_child_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#333"
+        android:gravity="center"
+        android:ellipsize="end"
+        android:textSize="13sp"
+        android:text="添加宝贝"/>
+</LinearLayout>

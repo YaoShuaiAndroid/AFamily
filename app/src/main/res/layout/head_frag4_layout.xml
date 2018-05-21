@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.youth.banner.Banner
+        android:id="@+id/frag4_banner"
+        android:layout_width="match_parent"
+        app:image_scale_type="center_crop"
+        android:layout_height="175dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/frag4_jj_tab"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@mipmap/ic_wjx_1" />
+
+        <ImageView
+            android:id="@+id/frag4_wj_tab"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@mipmap/ic_wjx_2" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@mipmap/ic_wjx_3"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/frag4_new_list_lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        android:scrollbars="none" />
+    <include layout="@layout/line_10dp_layout"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@mipmap/ic_wjx_4"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/frag4_child_list_lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        android:scrollbars="none" />
+    <include layout="@layout/line_10dp_layout"/>
+
+    <ImageView
+        android:id="@+id/frag4_jiao_ju_iv"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:background="@mipmap/ic_wjx_5"/>
+    <com.family.afamily.view.MyListView
+        android:id="@+id/frag4_jj_list_lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null"
+        android:dividerHeight="0dp"/>
+    <include layout="@layout/line_10dp_layout"/>
+    <ImageView
+        android:id="@+id/frag4_wan_ju_iv"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:background="@mipmap/ic_wjx_6"/>
+</LinearLayout>

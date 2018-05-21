@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_sign_tv"
+     android:layout_width="30dp"
+    android:layout_height="30dp"
+    android:layout_margin="5dp"
+    android:text="2"
+    android:gravity="center"
+    android:background="@drawable/item_sign_bg"
+    android:textColor="@drawable/item_sign_text"
+    />

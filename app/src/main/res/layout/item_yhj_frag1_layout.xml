@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:paddingBottom="10dp"
+    android:paddingRight="8dp"
+    android:id="@+id/item_coupon_root"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/item_coupon_img"
+        android:layout_width="160dp"
+        android:layout_height="90dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@mipmap/item_bg_juan">
+        <TextView
+            android:id="@+id/item_voucher_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="满100.00元"
+            android:textSize="16sp"/>
+        <TextView
+            android:id="@+id/item_voucher_tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textColor="#fff"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="减20.00元"
+            android:textSize="13sp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/item_frag1_coupon_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="15sp"
+        android:textColor="#555"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="游泳池免费体验劵"/>
+    <TextView
+        android:id="@+id/item_frag1_coupon_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:layout_marginTop="4dp"
+        android:textColor="#a9a9a9"
+        android:text="数量：20份"/>
+</LinearLayout>

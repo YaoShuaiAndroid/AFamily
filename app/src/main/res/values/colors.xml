@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#fb9927</color>
+    <color name="colorAccent">#fb9927</color>
+    <color name="color_yellow">#fb9927</color>
+    <color name="hint_login_color">#c4c4c4</color>
+    <color name="line_color">#e8e8e8</color>
+    <color name="issue_bg">#95f5f2f0</color>
+    <color name="tv_gray">#666666</color>
+    <color name="main_color">#F99830</color>
+    <color name="top_color">#867A6E</color>
+    <color name="tv_blue">#308BE9</color>     //蓝色
+    <color name="divider_gray">#d9d9d9</color>//细分割线颜色
+    <color name="divider_yu_yue">#f8f8f8</color>//细分割线颜色
+</resources>

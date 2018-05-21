@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/study_d_title_rl"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/color_yellow">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:onClick="back"
+            android:gravity="center"
+            android:paddingLeft="11dp"
+            android:paddingRight="11dp"
+            android:orientation="horizontal"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="18dp"
+                android:src="@mipmap/ic_back"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/study_details_tab1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    android:layout_weight="1"
+                    android:text="商品"/>
+                <View
+                    android:id="@+id/study_details_tab1_v"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#fff"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/study_details_tab2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    android:layout_weight="1"
+                    android:text="详情"/>
+                <View
+                    android:id="@+id/study_details_tab2_v"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:visibility="invisible"
+                    android:background="#fff"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/study_details_tab3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    android:layout_weight="1"
+                    android:text="评论"/>
+                <View
+                    android:id="@+id/study_details_tab3_v"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:visibility="invisible"
+                    android:background="#fff"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/study_d_root_rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/study_details_bottom"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.youth.banner.Banner
+                    android:id="@+id/study_details_banner"
+                    android:layout_width="match_parent"
+                    app:image_scale_type="fit_xy"
+                    android:layout_height="260dp" />
+
+                <TextView
+                    android:id="@+id/frag4_d_name_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="费雪家庭宝宝绘用本合辑（共10册）"
+                    android:textColor="#333"
+                    android:textSize="16sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <TextView
+                        android:id="@+id/study_details_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="¥59.50"
+                        android:textColor="#ff00"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/study_details_zk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/study_details_price"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/study_details_price"
+                        android:text="7.5折"
+                        android:textColor="#999"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/study_details_dj"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/study_details_price"
+                        android:layout_marginTop="3dp"
+                        android:text="定价："
+                        android:textColor="#999"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/study_details_yj"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/study_details_price"
+                        android:layout_marginTop="3dp"
+                        android:layout_toRightOf="@+id/study_details_dj"
+                        android:text="¥68.00"
+                        android:textColor="#999"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/study_details_jf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/study_details_dj"
+                        android:layout_marginTop="3dp"
+                        android:text="购买返200积分"
+                        android:textColor="@color/color_yellow"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/frag4_d_attr_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="vertical"
+                    >
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.8dp"
+                        android:background="@color/line_color" />
+                   <com.family.afamily.view.MyListView
+                       android:id="@+id/frag4_d_attr_list"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:overScrollMode="never"
+                       android:scrollbars="none"
+                       android:divider="@color/line_color"
+                       android:dividerHeight="0.8dp"/>
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:background="@drawable/fillet_4_huis_line_bg"-->
+                        <!--android:paddingBottom="4dp"-->
+                        <!--android:paddingLeft="10dp"-->
+                        <!--android:paddingRight="10dp"-->
+                        <!--android:paddingTop="4dp"-->
+                        <!--android:text="大号积木"-->
+                        <!--android:textColor="#333"-->
+                        <!--android:textSize="13sp" />-->
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.8dp"
+                    android:background="@color/line_color" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    >
+
+                    <CheckBox
+                        android:id="@+id/checkBox"
+                        style="@style/MyCheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="22dp"
+                        android:checked="true"
+                        android:paddingLeft="4dp"
+                        android:clickable="false"
+                        android:text="@string/app_name_send"
+                        android:textColor="#333"
+                        android:textSize="13sp" />
+
+                    <CheckBox
+                        style="@style/MyCheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="22dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:checked="true"
+                        android:clickable="false"
+                        android:paddingLeft="4dp"
+                        android:text="7天包退换"
+                        android:textColor="#333"
+                        android:textSize="13sp" />
+
+                    <CheckBox
+                        style="@style/MyCheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="22dp"
+                        android:checked="true"
+                        android:paddingLeft="4dp"
+                        android:clickable="false"
+                        android:text="保证正品"
+                        android:textColor="#333"
+                        android:textSize="13sp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/frag4_tip_iv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:layout_alignParentRight="true"
+                            android:src="@mipmap/ic_more_d" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <include layout="@layout/line_10dp_layout" />
+
+                <TextView
+                    android:id="@+id/frag4_d_comm_title_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="商品评论（150）"
+                    android:textColor="#333"
+                    android:textSize="16sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.8dp"
+                    android:background="@color/line_color" />
+
+                <com.family.afamily.view.MyListView
+                    android:id="@+id/study_comment_list_lv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@color/line_color"
+                    android:dividerHeight="0.8dp" />
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/study_details_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:background="#f2f2f2"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/study_details_collection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/study_details_collection_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_study_sc_1" />
+
+                    <TextView
+                        android:id="@+id/study_details_collection_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="3dp"
+                        android:text="收藏"
+                        android:textColor="#333"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/shopping_car_rl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/study_car_ic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:src="@mipmap/ic_car" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/study_car_ic"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="3dp"
+                        android:text="购物车"
+                        android:textColor="#333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/study_details_car_number"
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:layout_alignEnd="@+id/textView"
+                        android:layout_alignRight="@+id/textView"
+                        android:background="@drawable/circle_yellow_bg"
+                        android:gravity="center"
+                        android:maxLength="2"
+                        android:text="29"
+                        android:textColor="#fff"
+                        android:textSize="8sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/study_details_buy"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#ff9a00"
+                android:gravity="center"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="立即购买"
+                android:textColor="#fff"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/study_details_add_car"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#ff6700"
+                android:gravity="center"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="加入购物车"
+                android:textColor="#fff"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/study_details_web"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:visibility="gone"
+        android:scrollbars="none"/>
+    <com.superrecycleview.superlibrary.recycleview.SuperRecyclerView
+        android:id="@+id/study_comment_list_lv2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:overScrollMode="never"
+        android:scrollbars="none"/>
+</LinearLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <com.family.afamily.view.LandLayoutVideo
+            android:id="@+id/zaoj_video_player"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="195dp" />
+
+        <com.youth.banner.Banner
+            android:id="@+id/mBanner"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_margin="10dp"
+            />
+        <ImageView
+            android:id="@+id/conduct_play_img"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:background="@mipmap/ic_audio_play"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+
+    <WebView
+        android:id="@+id/innate_detail_webview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textSize="15sp"
+        android:textColor="#666"
+        android:lineSpacingExtra="7dp"/>
+
+    <LinearLayout
+        android:id="@+id/innate_detail_like_lin"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/master_30_yellow_bg"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/innate_detail_like_img"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:background="@mipmap/like" />
+
+        <TextView
+            android:id="@+id/innate_detail_like_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="0"
+            android:textColor="#8a8a8a"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#f8f8f8"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/innate_detail_comment_num"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="评论（0）"
+        android:textColor="#333"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#EEE"/>
+</LinearLayout>

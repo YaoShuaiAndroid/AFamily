@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="#ffffff"
+    android:layout_height="wrap_content">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#f8f8f8"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/item_eval_img"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:scrollbars="none"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/item_bg_4" />
+
+        <TextView
+            android:id="@+id/item_eval_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/item_eval_img"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:minLines="2"
+            android:text="暗示的了开发啊是的法律框架阿萨德" />
+
+        <TextView
+            android:id="@+id/item_eval_pl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_eval_name_tv"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/item_eval_img"
+            android:text="评分:"
+            android:textColor="#333"
+            android:textSize="15sp" />
+
+        <com.family.afamily.view.StarBar
+            android:id="@+id/item_eval_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_eval_name_tv"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="7dp"
+            android:layout_toRightOf="@+id/item_eval_pl"
+            app:starCount="5"
+            app:starDistance="8dp"
+            app:starEmpty="@mipmap/ic_star_2"
+            app:starFill="@mipmap/ic_star_1"
+            app:starSize="16dp" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/item_eval_content_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minLines="7"
+        android:gravity="top"
+        android:padding="10dp"
+        android:textSize="14sp"
+        android:textColor="#333333"
+        android:textColorHint="#999999"
+        android:hint="请输入您的评价"
+        android:background="#eeeeee"/>
+</LinearLayout>

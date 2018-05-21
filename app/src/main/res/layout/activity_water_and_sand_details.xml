@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/title_il"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include  layout="@layout/base_back_title_layout"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:layout_below="@+id/title_il"
+        android:layout_above="@+id/water_sand_submit_btn"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="185dp">
+
+                <ImageView
+                    android:id="@+id/water_bg_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/water_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:singleLine="true"
+                android:textColor="#555"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/water_decs_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="4dp"
+                android:textColor="#a9a9a9"
+                android:layout_marginBottom="10dp"
+                android:textSize="13sp" />
+
+            <RelativeLayout
+                android:id="@+id/water_integral_rl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/water_integral_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ff00"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/water_integral_tv"
+                    android:layout_marginLeft="2dp"
+                    android:text="积分"
+                    android:layout_toEndOf="@+id/water_integral_tv"
+                    android:layout_toRightOf="@+id/water_integral_tv"
+                    android:textColor="#222"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="预约报名中"
+                    android:textColor="#f65a32" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:visibility="gone"
+                android:background="@color/line_color" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:padding="10dp"
+                android:text="超过规定2000人数不接受预定"
+                android:textColor="#333"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:background="@color/line_color" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="#f2f2f2" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:background="@color/line_color" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:visibility="gone"
+                android:layout_marginTop="10dp">
+
+                <include layout="@layout/water_sand_layout" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.8dp"
+                    android:background="@color/line_color" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="#f2f2f2" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.8dp"
+                    android:background="@color/line_color" />
+            </RelativeLayout>
+
+
+
+            <TextView
+                android:id="@+id/water_and_sand_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="游泳池详情"
+                android:visibility="gone"
+                android:textColor="@color/color_yellow"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:layout_marginLeft="10dp"
+                android:visibility="gone"
+                android:background="@color/line_color" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.2"
+                android:padding="10dp"
+                android:visibility="gone"
+                android:text="注意事项："
+                android:textColor="#888"
+                android:textSize="14sp" />
+            <WebView
+                android:id="@+id/water_content_web"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never"
+                android:layout_margin="10dp"
+                android:scrollbars="none"
+                />
+        </LinearLayout>
+    </ScrollView>
+    <TextView
+        android:id="@+id/water_sand_submit_btn"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/color_yellow"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textColor="#fff"
+        android:layout_alignParentBottom="true"
+        android:text="小池预约"/>
+    <!--<LinearLayout-->
+        <!--android:id="@+id/water_sand_title"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+
+        <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="45dp">-->
+
+            <!--<ImageView-->
+                <!--android:layout_width="38dp"-->
+                <!--android:layout_height="38dp"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_marginLeft="3dp"-->
+                <!--android:padding="7dp"-->
+                <!--android:onClick="back"-->
+                <!--android:src="@mipmap/ic_back_yuan" />-->
+
+            <!--<ImageView-->
+                <!--android:layout_width="38dp"-->
+                <!--android:layout_height="38dp"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_marginRight="3dp"-->
+                <!--android:visibility="invisible"-->
+                <!--android:padding="7dp"-->
+                <!--android:src="@mipmap/ic_share" />-->
+        <!--</RelativeLayout>-->
+    <!--</LinearLayout>-->
+</RelativeLayout>

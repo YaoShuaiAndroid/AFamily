@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:padding="10dp"
+    android:gravity="center"
+    android:background="#fff"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/item_integral_img"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/item_bg_4"/>
+    <TextView
+        android:id="@+id/item_integral_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:textColor="#333"
+        android:layout_marginTop="10dp"
+        android:text="这是商品标题打击了打开连接是打发是打发"/>
+    <TextView
+        android:id="@+id/item_integral_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:textSize="14sp"
+        android:textColor="@color/color_yellow"
+        android:text="25502积分"/>
+</LinearLayout>

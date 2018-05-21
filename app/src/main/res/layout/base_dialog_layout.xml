@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_5_white_bg">
+
+        <TextView
+            android:id="@+id/dialog_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text="兑换流量币"
+            android:textColor="#333"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/dialog_content_tv"
+            android:textSize="15sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dialog_title_tv"
+            android:gravity="center"
+            android:lineSpacingMultiplier="1.2"
+            android:textColor="#666666"
+            android:minHeight="75dp"
+            android:paddingBottom="20dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp"
+            android:text="您每月剩余话费42元，都浪费了，可以兑换成流量币哦，马上兑换" />
+
+        <View
+            android:id="@+id/dialog_line"
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_below="@+id/dialog_content_tv"
+            android:background="#ddd" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dialog_line"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/dialog_cancel_tv"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:background="@drawable/item_selector_radius_to_left"
+                android:clickable="true"
+                android:gravity="center"
+                android:textColor="#333"
+                android:textSize="15sp"
+                android:text="取消" />
+
+            <TextView
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:background="#ddd" />
+
+            <TextView
+                android:id="@+id/dialog_confirm_tv"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:background="@drawable/item_selector_radius_to_right"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="确认"
+                android:textColor="@color/color_yellow"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
